@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario Maestro para Diabéticos | Edición Profesional 2026</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4af37;
+            --primary-dark: #b6932e;
+            --accent: #10b981;
+            --white: #ffffff;
+            --dark: #000000;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+        }
+
+        .hero-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.85)), url('https://images.unsplash.com/photo-1581333100576-b73bbe0ac1a6?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: blur(2px);
+            transform: scale(1.1);
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.04);
+            backdrop-filter: blur(15px);
+            -webkit-backdrop-filter: blur(15px);
+            max-width: 550px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
+            margin-bottom: 30px;
+        }
+
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--white), var(--primary));
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 0.75rem;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.5rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        h1 span { color: var(--primary); font-style: italic; }
+
+        .subtitle {
+            font-size: 1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 30px;
+        }
+
+        .features {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            border-radius: 16px;
+            margin-bottom: 35px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features li {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.9);
+            list-style: none;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .features li:last-child { margin-bottom: 0; }
+        .features li::before { content: '✓'; margin-right: 12px; color: var(--accent); font-weight: 800; }
+
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.15rem;
+            padding: 18px 25px;
+            border-radius: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+            transition: var(--transition);
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.5);
+        }
+
+        /* SECCIÓN LEGAL OBLIGATORIA PARA ADS */
+        .legal-footer {
+            max-width: 650px;
+            text-align: center;
+            font-size: 0.72rem;
+            color: rgba(255, 255, 255, 0.45);
+            line-height: 1.5;
+            padding: 15px;
+        }
+
+        .legal-footer p { margin-bottom: 10px; }
+        .legal-links { margin-top: 10px; }
+        .legal-links a { color: rgba(255, 255, 255, 0.6); text-decoration: underline; margin: 0 8px; }
+
+        @media (max-width: 600px) {
+            h1 { font-size: 2rem; }
+            .content-card { padding: 35px 20px; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="hero-background"></div>
+
+    <main class="main-container">
+        <div class="content-card">
+            <span class="badge">👨‍🍳 Edición Gourmet Profesional</span>
+            <h1>Cocina de Autor: <span>Saludable y Segura</span> para Diabéticos</h1>
+            <p class="subtitle">Descubre el recetario digital definitivo diseñado por expertos culinarios para transformar tu nutrición diaria con sabor y elegancia.</p>
+            
+            <ul class="features">
+                <li>Opciones prácticas de autor para tu bienestar.</li>
+                <li>Ingredientes de alta calidad, fáciles de encontrar.</li>
+                <li>Acceso digital inmediato desde cualquier dispositivo.</li>
+            </ul>
+
+            <a href="https://go.hotmart.com/U108413884H?ap=222e" class="btn">
+                👉 OBTENER MI GUÍA PROFESIONAL
+            </a>
+        </div>
+
+        <!-- PIE DE PÁGINA LEGAL OBLIGATORIO PARA GOOGLE Y META ADS -->
+        <footer class="legal-footer">
+            <p><strong>Aviso de Salud:</strong> La información contenida en este sitio web tiene fines meramente informativos y educativos. No sustituye la consulta, diagnóstico o tratamiento de un profesional de la salud o nutricionista profesional.</p>
+            <p>Este sitio no está afiliado, respaldado ni patrocinado por Facebook, Google, Meta o cualquiera de sus entidades. Facebook y Google son marcas registradas de sus respectivas empresas.</p>
+            <div class="legal-links">
+                <span>© 2026 Todos los derechos reservados</span> | 
+                <a href="https://go.hotmart.com/U108413884H?ap=222e" target="_blank">Políticas de Privacidad</a> | 
+                <a href="https://go.hotmart.com/U108413884H?ap=222e" target="_blank">Términos de Servicio</a>
+            </div>
+        </footer>
+    </main>
+
+</body>
+</html>
