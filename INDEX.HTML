@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Recetario Maestro para Diabéticos | Edición Profesional 2026</title>
+    <!-- Fuentes de Lujo y Modernas (Montserrat y Playfair Display) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Playfair+Display:ital,wght@0,700;1,700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #d4af37; /* Dorado Lujo */
+            --primary-dark: #b6932e;
+            --accent: #10b981; /* Verde Salud */
+            --white: #ffffff;
+            --dark: #000000;
+            --gray: #f4f4f4;
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            background-color: var(--dark);
+            color: var(--white);
+            line-height: 1.6;
+            overflow: hidden; /* Evita scroll en desktop */
+        }
+
+        /* Hero Background Envolvente */
+        .hero-background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            /* Imagen de Chef Profesional en Cocina Moderna - Alta Calidad */
+            background-image: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1581333100576-b73bbe0ac1a6?q=80&w=2000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            z-index: -1;
+            filter: blur(2px); /* Toque de desenfoque sutil para el texto */
+            transform: scale(1.1); /* Escala sutil para el efecto de blur */
+        }
+
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.03); /* Transparencia sofisticada */
+            backdrop-filter: blur(15px); /* Efecto Glassmorphism */
+            -webkit-backdrop-filter: blur(15px);
+            max-width: 550px;
+            width: 100%;
+            padding: 50px 40px;
+            border-radius: 24px;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            text-align: center;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.7);
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Decoración de línea dorada */
+        .content-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--white), var(--primary));
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+            color: var(--dark);
+            font-weight: 800;
+            font-size: 0.75rem;
+            padding: 8px 18px;
+            border-radius: 50px;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            margin-bottom: 25px;
+            box-shadow: 0 4px 10px rgba(212, 175, 55, 0.3);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 2.8rem;
+            line-height: 1.1;
+            margin-bottom: 20px;
+            font-weight: 700;
+            letter-spacing: -1px;
+            color: var(--white);
+        }
+
+        h1 span {
+            color: var(--primary);
+            font-style: italic;
+        }
+
+        .subtitle {
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.8);
+            margin-bottom: 35px;
+            font-weight: 400;
+            max-width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .features {
+            text-align: left;
+            background: rgba(0, 0, 0, 0.2);
+            padding: 25px;
+            border-radius: 16px;
+            margin-bottom: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .features li {
+            font-size: 0.95rem;
+            color: rgba(255, 255, 255, 0.9);
+            list-style: none;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+            font-weight: 500;
+        }
+
+        .features li:last-child {
+            margin-bottom: 0;
+        }
+
+        .features li::before {
+            content: '✓';
+            margin-right: 15px;
+            color: var(--accent);
+            font-weight: 800;
+            font-size: 1.1rem;
+        }
+
+        .btn {
+            display: block;
+            background: linear-gradient(135deg, var(--accent) 0%, #059669 100%);
+            color: var(--white);
+            font-weight: 800;
+            font-size: 1.25rem;
+            padding: 20px 30px;
+            border-radius: 14px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 10px 20px rgba(16, 185, 129, 0.3);
+            transition: var(--transition);
+            border: 1px solid rgba(16, 185, 129, 0.5);
+        }
+
+        .btn:hover {
+            transform: translateY(-3px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(16, 185, 129, 0.5);
+            background: linear-gradient(135deg, #059669 0%, var(--accent) 100%);
+        }
+
+        .footer-text {
+            margin-top: 25px;
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.5);
+            font-weight: 400;
+        }
+
+        /* Responsive Mobile */
+        @media (max-width: 600px) {
+            h1 { font-size: 2.2rem; }
+            .content-card { padding: 40px 25px; }
+            .subtitle { font-size: 1rem; }
+            .btn { font-size: 1.1rem; padding: 18px 25px; }
+            body { overflow: auto; } /* Permite scroll en móvil */
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Imagen de Fondo Envolvente -->
+    <div class="hero-background"></div>
+
+    <main class="main-container">
+        <div class="content-card">
+            <span class="badge">👨‍🍳 Edición Gourmet Profesional 2026</span>
+            <h1>Cocina de Autor: <span>Saludable y Segura</span> para Diabéticos</h1>
+            <p class="subtitle">Descubre el recetario digital definitivo diseñado por expertos culinarios para transformar tu nutrición diaria con sabor y elegancia.</p>
+            
+            <ul class="features">
+                <li>Opciones prácticas de autor para tu bienestar.</li>
+                <li>Ingredientes de alta calidad, fáciles de encontrar.</li>
+                <li>Acceso digital inmediato desde cualquier dispositivo.</li>
+            </ul>
+
+            <!-- ENLACE DE PAGO OPTIMIZADO CON ORDER BUMP CONFIGURADO -->
+            <a href="https://go.hotmart.com/U108413884H?ap=222e" class="btn">
+                👉 OBTENER MI GUÍA PROFESIONAL
+            </a>
+            <p class="footer-text">🔒 Pago seguro y entrega inmediata en tu correo</p>
+        </div>
+    </main>
+
+</body>
+</html>
